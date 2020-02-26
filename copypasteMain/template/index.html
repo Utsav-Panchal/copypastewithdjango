@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>output</title>
+</head>
+<body>
+<script>
+function eraseText() {
+    document.getElementById("output").value = "";
+}
+</script>
+
+        <form method="post">
+            {% csrf_token %}
+            <input type="submit">  <input type="button" value="Clear" onclick="javascript:eraseText();">
+            <textarea id="output" style="margin: 0px; width: 1504px; height: 777px; border:none;background-color: black;color:#fff;" name="text_Area" placeholder="Copy here">{{data}}</textarea>
+        </form>
+</body>
+</html>
